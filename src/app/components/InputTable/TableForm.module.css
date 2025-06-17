@@ -1,0 +1,11 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); 
+  gap: 0.00%;
+  background: #f7f9fb;
+  border-radius: 0.5%;
+  box-shadow: 0 10px 12px rgba(0,0,0,0.06);
+  margin: 5%;
+  max-width: 50%;
+  max-height: 30%;
+}

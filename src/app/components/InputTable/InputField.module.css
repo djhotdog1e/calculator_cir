@@ -1,0 +1,14 @@
+.inputField {
+  width: 30%;
+}
+.radioGroup {
+  display: flex;
+  gap: 5%;
+  align-items: center;
+}
+.radioLabel {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
