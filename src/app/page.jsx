@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import TableForm from "./components/InputTable/TableForm";
+import TableForm from "./components/InputTable/TableForm/TableForm";
 
 const initialValues = {
   buy: 0,
