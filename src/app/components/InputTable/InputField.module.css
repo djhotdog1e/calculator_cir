@@ -1,14 +1,31 @@
-.inputField {
-  width: 30%;
-}
 .radioGroup {
   display: flex;
   gap: 5%;
   align-items: center;
 }
-.radioLabel {
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
+
+.radioLabel input[type="radio"] {
+  appearance: none;         
+  width: 20px;             
+  height: 20px;
+  border: 2px solid #aaa;
+  border-radius: 50%;
+  background: #fff;
   cursor: pointer;
+  position: relative;
+  transition: border-color 0.2s, background-color 0.2s;
 }
+
+
+.radioLabel input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #007bff;
+}
+
+

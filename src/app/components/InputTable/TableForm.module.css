@@ -1,11 +1,157 @@
 .form {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr); 
-  gap: 0.00%;
-  background: #f7f9fb;
-  border-radius: 0.5%;
+  display: block;
+  padding: 2rem;
+  background: #cfe0f1;
+  border-radius: 8px;
   box-shadow: 0 10px 12px rgba(0,0,0,0.06);
   margin: 5%;
-  max-width: 50%;
-  max-height: 30%;
+  max-width: 70%;
+  font-family: Arial, sans-serif;
+}
+
+.twoColumnGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.formRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.formRow label {
+  flex: 1;
+  font-weight: 700;
+  color: #222;
+  font-size: 1.4rem;
+  text-align: right;
+  padding-right: 1rem;
+  white-space: nowrap;
+}
+
+.formRow input {
+  flex: 0 0 120px;
+  padding: 8px 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: #fff;
+  transition: border 0.2s;
+  text-align: center;
+}
+
+.formRow input:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+
+
+.ndsSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.ndsSection label {
+  font-weight: 700;
+  color: #222;
+  font-size: 1.4rem;
+  margin-right: 2rem;
+  min-width: 150px;
+}
+
+
+.currencySection {
+  margin-top: 2rem;
+}
+
+.currencyHeader {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  font-weight: 700;
+  color: #222;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #999;
+  margin-bottom: 1rem;
+}
+
+.currencyHeader span {
+  text-align: center;
+}
+
+.currencyRow {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.currencyLabel {
+  font-weight: 700;
+  color: #222;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.currencyRow input {
+  padding: 8px 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: #fff;
+  transition: border 0.2s;
+  text-align: center;
+}
+
+.currencyRow input:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+
+
+@media (max-width: 768px) {
+  .twoColumnGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .formRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .formRow label {
+    text-align: left;
+    padding-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .formRow input {
+    width: 100%;
+    flex: none;
+  }
+  
+  .currencyHeader,
+  .currencyRow {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  
+  .currencyLabel {
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
 }

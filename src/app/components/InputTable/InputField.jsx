@@ -1,33 +1,34 @@
+import React from 'react';
 import inputStyles from './InputField.module.css';
 import shared from '@/app/styles/shared.module.css';
-export default function InputField({ inputType, name, value, onChange, options, ...props }) {
 
+export default function InputField({ inputType, name, value, onChange, options, className, ...props }) {
   if (inputType === "radio" && options) {
     return (
       <div className={inputStyles.radioGroup}>
-        {options.map(opt => (
-          <label className={inputStyles.radioLabel} key={opt.value}>
+        {options.map((option) => (
+          <label key={option.value} className={inputStyles.radioLabel}>
             <input
               type="radio"
               name={name}
-              value={opt.value}
-              checked={value === opt.value}
+              value={option.value}
+              checked={value === option.value}
               onChange={onChange}
-              {...props}
             />
-            {opt.label}
+            <span className={inputStyles.radioText}>{option.label}</span>
           </label>
         ))}
       </div>
     );
   }
+
   return (
     <input
-      className={`${shared.input} ${inputStyles.inputField}`}
       type={inputType}
       name={name}
       value={value}
       onChange={onChange}
+      className={className || shared.input}
       {...props}
     />
   );
