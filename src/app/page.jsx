@@ -33,11 +33,16 @@ export default function Page() {
   };
 
   return (
-    <div style={{ padding: '20px', backgroundColor: '#f5f5f5', minHeight: '100vh' }}>
-      <TableForm 
-        values={values} 
-        onChange={handleChange} 
-      />
+    <div className="min-h-screen bg-gray-100 py-8">
+      <div className="container mx-auto px-4">
+        <h1 className="text-2xl font-bold text-gray-800 text-center mb-8">
+          Чтобы получить расчет цены договора, укажите исходные данные ниже:
+        </h1>
+        <TableForm 
+          values={values} 
+          onChange={handleChange} 
+        />
+      </div>
     </div>
   );
 }

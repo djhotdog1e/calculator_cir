@@ -1,18 +1,19 @@
 import React from 'react';
 import InputField from '@/app/components/InputTable/InputField/InputField';
-import styles from './FormRow.module.css';
-import shared from '@/app/styles/shared.module.css';
 
 export default function FormRow({ label, inputType = "number", name, value, onChange, options }) {
   return (
-    <div className={styles.formRow}>
-      <label className={shared.label}>{label}</label>
+    <div className="flex items-center justify-between py-1">
+      <label className="w-2/3 font-medium text-black text-md text-left pr-2 whitespace-nowrap">
+        {label}
+      </label>
       <InputField
         inputType={inputType}
         name={name}
         value={value}
         onChange={onChange}
-        className={shared.input}
+        className="w-35 py-1 border border-gray-300 rounded text-md font-medium bg-white 
+        transition-colors focus:border-blue-500 focus:outline-none text-center"
         options={options}
       />
     </div>

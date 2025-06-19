@@ -1,7 +1,6 @@
 import React from 'react';
 import InputField from '@/app/components/InputTable/InputField/InputField';
-import styles from './NdsSection.module.css';
-import shared from '@/app/styles/shared.module.css';
+
 
 export default function NdsSection({ value, onChange }) {
   const ndsOptions = [
@@ -11,8 +10,8 @@ export default function NdsSection({ value, onChange }) {
   ];
 
   return (
-    <div className={styles.ndsSection}>
-      <label className={shared.label}>Значение НДС</label>
+    <div className="flex items-center justify-start mb-8 mr-90">
+      <label className="font-medium text-black ml-2 min-w-[14%]">Значение НДС</label>
       <InputField
         inputType="radio"
         name="nds"
