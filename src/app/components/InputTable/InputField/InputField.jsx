@@ -28,7 +28,7 @@ export default function InputField({ inputType, name, value, onChange, options, 
       name={name}
       value={value}
       onChange={onChange}
-      className={`py-1 border border-gray-300 rounded-md text-base font-medium bg-white transition-colors duration-200 focus:border:outline-none
+      className={`py-1 border border-gray-300 rounded-md text-base text-black font-medium bg-white transition-colors duration-200 focus:border:outline-none
       hover:border-gray-400 ${className || ''}`}
       {...props}
     />
