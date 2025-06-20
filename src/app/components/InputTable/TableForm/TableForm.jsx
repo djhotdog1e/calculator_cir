@@ -11,7 +11,7 @@ export default function TableForm({ values, onChange }) {
         {name: 'creditPercent', label: '% кредита'},
         {name: 'delayDays', label: 'Дни отсрочки'},
         {name: 'creditDays', label: 'Дни кредита'},
-        {name: 'markup', label: 'Наценка'},
+        {name: 'markup', label: 'Наценка, %'},
         {name: 'advancePercent', label: 'Авансирование в %'},
         {name: 'inflation', label: 'Инфляция'},
         {name: 'advanceAmount', label: 'Авансирование в сумме'}

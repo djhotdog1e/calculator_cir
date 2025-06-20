@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import TableForm from "./components/InputTable/TableForm/TableForm";
+import ResultsSection from "./components/ResultTable/ResultSection/ResultSection";
 
 const initialValues = {
   buy: 0,
@@ -21,8 +22,44 @@ const initialValues = {
   euroPayment: 0,
 };
 
+const initialResults = {
+  total: 0,
+  totalUsdInvoice: 0,
+  totalEuroInvoice: 0,
+  totalUsdPayment: 0,
+  totalEuroPayment: 0,
+};
+
 export default function Page() {
   const [values, setValues] = useState(initialValues);
+  const [results, setResults] = useState(initialResults);
+  
+  const handleCalculate = () => {
+    const fieldsToSum = ['buy', 'creditAmount', 'sale', 'creditPercent', 'delayDays', 
+      'creditDays', 'markup', 'advancePercent', 'inflation', 'advanceAmount'];
+    
+    const ndsPercent = parseInt(values.nds || 0);
+    
+    const total = fieldsToSum.reduce((sum, field) => {
+      return sum + (Number(values[field]) || 0) * (1 + ndsPercent / 100);
+    }, 0);
+
+
+    const usdInvoiceRate = Number(values.usdInvoice) || 1;
+    const usdPaymentRate = Number(values.usdPayment) || 1;
+    const euroInvoiceRate = Number(values.euroInvoice) || 1;
+    const euroPaymentRate = Number(values.euroPayment) || 1;
+
+    setResults({
+      total: total,
+      totalUsdInvoice: total / usdInvoiceRate,
+      totalEuroInvoice: total / euroInvoiceRate,
+      totalUsdPayment: total / usdPaymentRate,
+      totalEuroPayment: total / euroPaymentRate,
+    });
+
+
+  };
 
   const handleChange = (e) => {
     const { name, value, type } = e.target;
@@ -42,6 +79,14 @@ export default function Page() {
           values={values} 
           onChange={handleChange} 
         />
+      </div>
+      <div className="flex justify-end items-center max-w-4/5">
+        <button onClick={handleCalculate} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Рассчитать
+        </button>
+      </div>
+      <div>
+        <ResultsSection results={results} />
       </div>
     </div>
   );
