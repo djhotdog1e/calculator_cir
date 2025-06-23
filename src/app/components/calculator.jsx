@@ -1,6 +1,6 @@
 import React from 'react';
 import TableForm from './InputTable/TableForm/TableForm';
-import ResultsSection from './ResultTable/ResultSection/ResultSection';
+import ResultForm from './ResultTable/ResultForm/ResultForm';
 import { useCalculator } from '../hooks/useCalc';
 
 export default function Calculator() {
@@ -19,7 +19,13 @@ export default function Calculator() {
         Сбросить
       </button>
 
-      <ResultsSection results={results} />
+      <div className="mt-8">
+        <h2 className="text-xl font-semibold mb-2">Результаты расчета</h2>
+        <ResultForm 
+          results={results} 
+          values={values} 
+        />
+      </div>
     </div>
   );
 }
