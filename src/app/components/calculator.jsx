@@ -1,6 +1,8 @@
 import React from 'react';
 import TableForm from './InputTable/TableForm/TableForm';
-import ResultForm from './ResultTable/ResultForm/ResultForm';
+//import ResultForm from './ResultTable/ResultForm/ResultForm';
+import ResultForm from './ResultTable2/ResultTableTabulator';
+//import ResultForm from './ResultTable2/ResultTableTanStack';
 import { useCalculator } from '../hooks/useCalc';
 
 export default function Calculator() {

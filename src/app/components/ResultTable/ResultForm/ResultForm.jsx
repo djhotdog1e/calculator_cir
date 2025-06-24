@@ -34,8 +34,8 @@ export default function ResultForm({ results, values }) {
     {
         title: 'ИП ДР 7%',
         subSections: [
-            { title: 'Прямой расчет', taxTypes: ['УСН ДР 7%'] },
-            { title: 'За сколько продавать', taxTypes: ['УСН ДР 7%'] }
+            { title: 'Прямой расчет', taxTypes: ['УСН ДР 7% (НДС 20%)'] },
+            { title: 'За сколько продавать', taxTypes: ['УСН ДР 7% (НДС 20%)'] }
         ]
     }
   ];
