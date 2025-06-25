@@ -1,13 +1,8 @@
 "use client"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { navItems } from './routes.js';
 
-const navItems = [
-    {label: "Базовый калькулятор", href:"/"},
-    {label: "Сложная закупка ИНВ+НДС", href:"/firstPage"},
-    {label: "Штрафы", href:"/secondPage"},
-    {label: "Роялти", href:"/thirdPage"}
-];
 
 export default function NavBar() {
     const pathname = usePathname();
