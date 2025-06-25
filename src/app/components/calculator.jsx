@@ -7,8 +7,8 @@ export default function Calculator() {
   const { values, handleChange, results, reset } = useCalculator();
 
   return (
-    <div className="p-8 bg-gray-100 min-h-screen">
-      <h1 className="text-2xl font-bold mb-6 text-black">Бухгалтерский калькулятор</h1>
+    <div className="p-8 min-h-screen">
+      <h1 className="text-2xl font-normal mb-6 text-black text-center max-w-130 mx-auto">Чтобы получить расчет цены договора, укажите исходные данные ниже:</h1>
 
       <TableForm values={values} onChange={handleChange} />
 
