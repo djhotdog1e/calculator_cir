@@ -14,12 +14,6 @@ export const sections = [
         ]
     },
     {
-        title: '',
-        subSections: [ 
-            {title: 'Экспорт', taxTypes: ['Экспорт']}
-        ]
-    },
-    {
         title: 'ИП ДР 7%',
         subSections: [
             { title: 'Прямой расчет', taxTypes: ['УСН ДР 7% (НДС 0,5,7%)'] },

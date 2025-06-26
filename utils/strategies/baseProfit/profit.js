@@ -1,4 +1,4 @@
-// calculator/strategies/profit.js
+// для ндс 0
 export const profit = {
   key: 'profit',
   label: 'Чистая прибыль',
