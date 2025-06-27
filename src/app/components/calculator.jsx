@@ -2,7 +2,7 @@ import React from 'react';
 import TableForm from './InputTable/TableForm/TableForm';
 import ResultForm from './ResultTable/ResultForm/ResultForm';
 import { useCalculator } from '../hooks/useCalc';
-import { ExportResultTableToExcel } from './ExportResultTableToExcel';
+import { ExportResultTableToExcel } from '../../../utils/ExportResultTableToExcel';
 import { getRows } from './ResultTable/ResultForm/rows';
 import { sections } from './ResultTable/ResultForm/sections';
 
