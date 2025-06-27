@@ -1,6 +1,3 @@
-import { strategies } from "../../../../../utils/strategies/calc_strategies";
-import { profitRate6 } from "../../../../../utils/strategies/profitRate/profitRate6";
-
 export const getRows = (values) => [
     { id: 'buy', label: 'Закуп', value: values.buy },
     { id: 'nds20', label: 'НДС 20%', value: 0,  strategies: 
