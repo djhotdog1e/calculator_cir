@@ -16,9 +16,10 @@ import { ndsToPayZaSkolko } from "./ndsToPay/ndsToPayZaSkolko";
 import { profitRate6 } from "./profitRate/profitRate6";
 import { profitRate7 } from "./profitRate/profitRate7";
 import { profitRate25 } from "./profitRate/profitRate25";
+import { taxProfit25Nds20 } from "./taxProfit/taxProfit25Nds20";
 
 export const strategies = [totalCost, 
     profit, netCost, ndsBuy20, markup, ndsSale, saleFields, ndsSaleZaSkolko, 
     profitTaxBase, profitTaxBaseZaSkolko, profitTaxBaseNdsBuy0, nds20ToPay,
     nds20ToPayZaSkolko, ndsToPay, ndsToPayZaSkolko, profitRate6, profitRate7,
-    profitRate25];
+    profitRate25, taxProfit25Nds20];

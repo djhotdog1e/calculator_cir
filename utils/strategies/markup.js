@@ -1,5 +1,5 @@
 export const markup = {
-  key: 'markup',
+  key: 'markupVal',
   label: 'Наценка',
   dependsOn: ['buy', 'sale',],
   calculate: ({ buy, sale }) => {

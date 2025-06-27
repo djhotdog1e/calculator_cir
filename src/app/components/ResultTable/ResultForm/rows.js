@@ -62,7 +62,11 @@ export const getRows = (values) => [
             'ИП ДР 7%|За сколько продавать|УСН ДР 7% (НДС 0,5,7%)': 'ndsToPayZaSkolko',
         }
     },
-    { id: 'profitTax', label: 'Налог на прибыль', strategy: '' },
+    { id: 'profitTax', label: 'Налог на прибыль', strategies:
+        {
+            'СиР|Какая будет прибыль|НДС 20%': 'taxProfit25Nds20',
+        }
+     },
     { id: 'totalTax', label: 'Всего налогов', strategy: '' },
     { id: 'profit', label: 'Прибыль', strategy: '' },
     { id: 'profitPercent', label: '% прибыли', strategy: '' },

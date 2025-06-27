@@ -8,8 +8,9 @@ export const calculateResults = (values) => {
     for (const key of strategy.dependsOn) {
       inputs[key] = values[key];
     }
-
-    results[strategy.key] = strategy.calculate(inputs);
+    const result = strategy.calculate(inputs);
+    results[strategy.key] = result;
+    values[strategy.key] = result;
   }
 
   return results;
