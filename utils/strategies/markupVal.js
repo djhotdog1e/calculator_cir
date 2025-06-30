@@ -1,4 +1,4 @@
-export const markup = {
+export const markupVal = {
   key: 'markupVal',
   label: 'Наценка',
   dependsOn: ['buy', 'sale',],
