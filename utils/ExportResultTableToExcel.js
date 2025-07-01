@@ -1,7 +1,7 @@
 import * as XLSX from 'xlsx';
 import { saveAs } from 'file-saver';
-import { getHeadersExcel } from '../../../utils/getHeadersExcel';
-import { getRowsExcel } from '../../../utils/getRowsExcel';
+import { getHeadersExcel } from './getHeadersExcel';
+import { getRowsExcel } from './getRowsExcel';
 
 export function ExportResultTableToExcel({ sections, rows, results, fileName }) {
   const [header1, header2, header3] = getHeadersExcel(sections);

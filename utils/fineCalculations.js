@@ -1,9 +1,9 @@
-import { strategies } from "./strategies/calc_strategies";
+import { fineStrategies } from "./fineStrategies/calc_fineStrategies";
 
-export const calculateResults = (values) => {
+export const calculateFineResults = (values) => {
   const results = {};
 
-  for (const strategy of strategies) {
+  for (const strategy of fineStrategies) {
     const inputs = {};
     for (const key of strategy.dependsOn) {
       inputs[key] = values[key];
