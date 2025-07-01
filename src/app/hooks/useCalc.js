@@ -2,21 +2,21 @@ import { useState, useMemo } from 'react';
 import { calculateResults } from '../../../utils/calculations';
 
 const defaultValues = {
-  buy: '',
-  creditAmount: '',
-  sale: '',
-  creditPercent: '',
-  delayDays: '',
-  creditDays: '',
-  markup: '',
-  advancePercent: '',
-  inflation: '',
-  advanceAmount: '',
-  nds: '0',
-  usdInvoice: '',
-  usdPayment: '',
-  euroInvoice: '',
-  euroPayment: '',
+  buy: '1200000',
+  creditAmount: '100000',
+  sale: '1550000',
+  creditPercent: '17',
+  delayDays: '100',
+  creditDays: '30',
+  markup: '30',
+  advancePercent: '5',
+  inflation: '18',
+  advanceAmount: '20',
+  nds: '5',
+  usdInvoice: '80',
+  usdPayment: '82',
+  euroInvoice: '75',
+  euroPayment: '89',
 };
 
 export const useCalculator = () => {

@@ -3,7 +3,7 @@ import ResultCell from '@/app/components/ResultTable/ResultCell/ResultCell';
 
 export default function ResultRow({ row, sections, results }) {
 
-  const FORMATTED_ROWS = ['markup', 'profitPercent', 'totalCostWithLossAndAdvancePercent'];
+  const FORMATTED_ROWS = ['markupVal', 'percentProfit', 'totalCostWithLossAndAdvancePercent'];
 
   const shouldFormat = FORMATTED_ROWS.includes(row.id);
 
